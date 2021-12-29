@@ -1,0 +1,298 @@
+@font-face {
+  font-family: CenturyGothic;
+  src: url(../font/CenturyGothic.ttf);
+}
+
+:root {
+  --bs-body-rgb-alt: var(--bs-body-bg-rgb-alt); /* Fix Bootstrap-Nightshade missing variable */
+}
+
+body {
+  font-family: 'CenturyGothic', sans-serif;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+#rotatedText, #rotatedTextUnderline {
+  transition: all .45s ease;
+}
+
+
+.white-diagonal, .light-diagonal {
+  position: absolute;
+  left: 0;
+  top: -1px;
+  right: 0;
+  width: 100%;
+  height: 100px;
+  clip-path: polygon(0 0, 100% 0, 100% 100px);
+}
+
+.white-diagonal {
+  background-color: var(--bs-white);
+}
+
+.light-diagonal {
+  background-color: var(--bs-light);
+}
+
+/*** scrollbar
+ *    ███████╗ ██████╗██████╗  ██████╗ ██╗     ██╗     ██████╗  █████╗ ██████╗ 
+ *    ██╔════╝██╔════╝██╔══██╗██╔═══██╗██║     ██║     ██╔══██╗██╔══██╗██╔══██╗
+ *    ███████╗██║     ██████╔╝██║   ██║██║     ██║     ██████╔╝███████║██████╔╝
+ *    ╚════██║██║     ██╔══██╗██║   ██║██║     ██║     ██╔══██╗██╔══██║██╔══██╗
+ *    ███████║╚██████╗██║  ██║╚██████╔╝███████╗███████╗██████╔╝██║  ██║██║  ██║
+ *    ╚══════╝ ╚═════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚══════╝╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+ *                                                                             
+ */
+::-webkit-scrollbar-track, html.dark ::-webkit-scrollbar-track {
+  box-shadow: inset -1px 0 .3em #fff3,
+              inset 1px 0 .3em #0003;
+}
+html.dark ::-webkit-scrollbar-track, html.dark ::-webkit-scrollbar-track {
+  background-color: var(--bs-body-bg-alt);
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+  background-color: var(--bs-body-bg);
+}
+html.dark ::-webkit-scrollbar {
+  background-color: var(--bs-body-bg-alt);
+}
+
+::-webkit-scrollbar-thumb, html.dark ::-webkit-scrollbar-thumb {
+  background-color: #f60a;
+}
+
+/*** tm carousel
+ *    ████████╗███╗   ███╗     ██████╗ █████╗ ██████╗  ██████╗ ██╗   ██╗███████╗███████╗██╗     
+ *    ╚══██╔══╝████╗ ████║    ██╔════╝██╔══██╗██╔══██╗██╔═══██╗██║   ██║██╔════╝██╔════╝██║     
+ *       ██║   ██╔████╔██║    ██║     ███████║██████╔╝██║   ██║██║   ██║███████╗█████╗  ██║     
+ *       ██║   ██║╚██╔╝██║    ██║     ██╔══██║██╔══██╗██║   ██║██║   ██║╚════██║██╔══╝  ██║     
+ *       ██║   ██║ ╚═╝ ██║    ╚██████╗██║  ██║██║  ██║╚██████╔╝╚██████╔╝███████║███████╗███████╗
+ *       ╚═╝   ╚═╝     ╚═╝     ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝  ╚═════╝ ╚══════╝╚══════╝╚══════╝
+ *                                                                                              
+ */
+ label[for^="tm"] {
+  transition: all .125s ease;
+}
+
+input[name="tm"]#tm-1:checked ~ .container label[for="tm-1"],
+input[name="tm"]#tm-2:checked ~ .container label[for="tm-2"],
+input[name="tm"]#tm-3:checked ~ .container label[for="tm-3"],
+input[name="tm"]#tm-4:checked ~ .container label[for="tm-4"],
+input[name="tm"]#tm-5:checked ~ .container label[for="tm-5"],
+input[name="tm"]#tm-6:checked ~ .container label[for="tm-6"],
+input[name="tm"]#tm-7:checked ~ .container label[for="tm-7"],
+input[name="tm"]#tm-8:checked ~ .container label[for="tm-8"] {
+  margin-right: .25rem;
+  font-weight: bold;
+}
+
+input[name="tm"]#tm-1:checked ~ .container label[for="tm-1"] span,
+input[name="tm"]#tm-2:checked ~ .container label[for="tm-2"] span,
+input[name="tm"]#tm-3:checked ~ .container label[for="tm-3"] span,
+input[name="tm"]#tm-4:checked ~ .container label[for="tm-4"] span,
+input[name="tm"]#tm-5:checked ~ .container label[for="tm-5"] span,
+input[name="tm"]#tm-6:checked ~ .container label[for="tm-6"] span,
+input[name="tm"]#tm-7:checked ~ .container label[for="tm-7"] span,
+input[name="tm"]#tm-8:checked ~ .container label[for="tm-8"] span {
+  color: var(--bs-primary);
+}
+
+.tm-content-wrapper {
+  border-radius: 4px;
+  border: 0 solid #0000;
+  transition: all .125s ease;
+}
+
+.tm-content {
+  display: none;
+  font-size: 1.25rem!important;
+  overflow: auto;
+}
+
+input[name="tm"]#tm-1:checked ~ .container .tm-content-wrapper {
+  border-width: 4rem;
+  border-color: #f60f;
+}
+input[name="tm"]#tm-2:checked ~ .container .tm-content-wrapper {
+  border-width: 3.5rem;
+  border-color: #f60d;
+}
+input[name="tm"]#tm-3:checked ~ .container .tm-content-wrapper {
+  border-width: 3rem;
+  border-color: #f60b;
+}
+input[name="tm"]#tm-4:checked ~ .container .tm-content-wrapper {
+  border-width: 2.5rem;
+  border-color: #f609;
+}
+input[name="tm"]#tm-5:checked ~ .container .tm-content-wrapper {
+  border-width: 2rem;
+  border-color: #f607;
+}
+input[name="tm"]#tm-6:checked ~ .container .tm-content-wrapper {
+  border-width: 1.5rem;
+  border-color: #f605;
+}
+input[name="tm"]#tm-7:checked ~ .container .tm-content-wrapper {
+  border-width: 1rem;
+  border-color: #f603;
+}
+input[name="tm"]#tm-8:checked ~ .container .tm-content-wrapper {
+  border-width: .5rem;
+  border-color: #f601;
+}
+
+input[name="tm"]#tm-1:checked ~ .container .tm-content:nth-child(1),
+input[name="tm"]#tm-2:checked ~ .container .tm-content:nth-child(2),
+input[name="tm"]#tm-3:checked ~ .container .tm-content:nth-child(3),
+input[name="tm"]#tm-4:checked ~ .container .tm-content:nth-child(4),
+input[name="tm"]#tm-5:checked ~ .container .tm-content:nth-child(5),
+input[name="tm"]#tm-6:checked ~ .container .tm-content:nth-child(6),
+input[name="tm"]#tm-7:checked ~ .container .tm-content:nth-child(7),
+input[name="tm"]#tm-8:checked ~ .container .tm-content:nth-child(8) {
+  display: block;
+}
+
+/*** roadmap
+ *    ██████╗  ██████╗  █████╗ ██████╗ ███╗   ███╗ █████╗ ██████╗ 
+ *    ██╔══██╗██╔═══██╗██╔══██╗██╔══██╗████╗ ████║██╔══██╗██╔══██╗
+ *    ██████╔╝██║   ██║███████║██║  ██║██╔████╔██║███████║██████╔╝
+ *    ██╔══██╗██║   ██║██╔══██║██║  ██║██║╚██╔╝██║██╔══██║██╔═══╝ 
+ *    ██║  ██║╚██████╔╝██║  ██║██████╔╝██║ ╚═╝ ██║██║  ██║██║     
+ *    ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚═════╝ ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝     
+ *                                                                
+ */
+ #roadmap-header {
+  position: relative;
+}
+
+#roadmap-header > div {
+  text-transform: uppercase;
+  font-size: 5.55rem;
+  color: #0000;
+  -webkit-text-stroke: 2px #f604;
+}
+
+#roadmap-header > div,
+#roadmap-header > h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#roadmap {
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+}
+
+#roadmap > div {
+  flex-shrink: 0;
+  width: 256px;
+}
+
+#roadmap > div > h2 {
+  text-align: center;
+}
+
+#roadmap > div > .line {
+  position: relative;
+  height: 50px;
+}
+
+#roadmap > div > .line > * {
+  position: absolute;
+  top: 50%;
+}
+
+#roadmap > div > div > .form-check.done::after,
+#roadmap > div > div > .form-check.active::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#roadmap > div > div > .form-check.done::after {
+  box-shadow: 0 0 25px 25px #f602;
+}
+
+#roadmap > div > div > .form-check.active::after {
+  box-shadow: 0 0 50px 50px #f603;
+}
+
+#roadmap > div > div > .left,
+#roadmap > div > div > .right {
+  transform: translateY(-50%);
+  width: 50%;
+  height: 2px;
+  background-color: var(--bs-primary);
+}
+
+#roadmap > div > div > .right {
+  right: 0;
+}
+
+#roadmap > div > div > .left.active,
+#roadmap > div > div > .right.active {
+  box-shadow: 0 0 6px 2px #f60;
+}
+
+#roadmap > div > div > .form-check {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#roadmap > div > div > .form-check .form-check-input {
+  opacity: 1!important;
+}
+
+/*** media queries
+ *    ███╗   ███╗███████╗██████╗ ██╗ █████╗ ███████╗
+ *    ████╗ ████║██╔════╝██╔══██╗██║██╔══██╗██╔════╝
+ *    ██╔████╔██║█████╗  ██║  ██║██║███████║███████╗
+ *    ██║╚██╔╝██║██╔══╝  ██║  ██║██║██╔══██║╚════██║
+ *    ██║ ╚═╝ ██║███████╗██████╔╝██║██║  ██║███████║
+ *    ╚═╝     ╚═╝╚══════╝╚═════╝ ╚═╝╚═╝  ╚═╝╚══════╝
+ *                                                  
+ */
+@media(max-width: 576px) {
+
+  .tm-ul {
+    height: 165px;
+    margin: 0 -0.75rem 1rem -0.75rem;
+    padding: 1rem 2rem 1rem 0;
+    overflow: auto;
+    background-color: #fff5;
+    box-shadow: inset 0 0 5px #0004;
+  }
+
+  input[name="tm"]#tm-1:checked ~ .container .tm-content-wrapper { border-width: 2.25rem; }
+  input[name="tm"]#tm-2:checked ~ .container .tm-content-wrapper { border-width: 1.75rem; }
+  input[name="tm"]#tm-3:checked ~ .container .tm-content-wrapper { border-width: 1.5rem; }
+  input[name="tm"]#tm-4:checked ~ .container .tm-content-wrapper { border-width: 1.25rem; }
+  input[name="tm"]#tm-5:checked ~ .container .tm-content-wrapper { border-width: 1rem; }
+  input[name="tm"]#tm-6:checked ~ .container .tm-content-wrapper { border-width: .75rem; }
+  input[name="tm"]#tm-7:checked ~ .container .tm-content-wrapper { border-width: .5rem; }
+  input[name="tm"]#tm-8:checked ~ .container .tm-content-wrapper { border-width: .25rem; }
+
+  #roadmap {
+    justify-content: flex-start;
+  }
+
+  #roadmap-header > div {
+    font-size: 3.33rem;
+  }
+
+}
