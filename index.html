@@ -169,7 +169,7 @@
         </div>
     </section>
 
-    <section class="position-relative pt-5 my-5 border-bottom bg-light">
+    <section class="position-relative pt-5 mt-5 border-bottom bg-light">
         <div class="white-diagonal"></div>
         <div class="pt-5 mt-5 text-center">
             <div class="px-4">
@@ -216,26 +216,33 @@
     </svg>
 
     <style>
+        #misc-section {
+            background-image: url(img/ebox-iso-stairs.svg);
+            background-size: 100%;
+            background-position: center;
+            background-color: #fff;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 100px));
+        }
         .feats-card {
             display: flex;
             align-items: flex-start;
             padding: 2rem 1.5rem;
-            border: 1px solid #eee;
             border-radius: 1rem;
-            /* background-image: url(img/small-detail.png);
-            background-repeat: no-repeat;
-            background-size: 100px;
-            background-position: calc(100% - 1rem) calc(100% - 1rem); */
             box-shadow: 0 5px 10px #0001;
         }
+        @media (max-width: 576px) {
+            #misc-section {
+                background-size: 200%;
+            }
+        }
     </style>
-    <section class="px-3 px-md-4 py-5">
+    <section id="misc-section" class="px-3 px-md-4 py-5">
         <div class="container col-xxl-8 py-md-5 my-md-5">
             <h2 class="display-5 fw-bold pb-2 border-bottom">Our set of values</h2>
         
             <div class="row row-cols-1 row-cols-sm-2 g-4 py-5">
                 <div class="col">
-                    <div class="feats-card">
+                    <div class="feats-card glass">
                         <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em">
                             <use xlink:href="#key"></use>
                         </svg>
@@ -247,7 +254,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="feats-card">
+                    <div class="feats-card glass">
                         <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em">
                             <use xlink:href="#piggy-bank"></use>
                         </svg>
@@ -259,7 +266,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="feats-card">
+                    <div class="feats-card glass">
                         <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em">
                             <use xlink:href="#people"></use>
                         </svg>
@@ -271,7 +278,7 @@
                     </div>
                 </div>
                 <div class="col d-flex align-items-start">
-                    <div class="feats-card">
+                    <div class="feats-card glass">
                         <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em">
                             <use xlink:href="#x-diamond"></use>
                         </svg>
@@ -284,69 +291,68 @@
                 </div>
             </div>
         </div>
+
+        <div class="mx-auto col-xxl-8 py-5">
+            <div class="p-3 pb-md-5 mx-auto text-center">
+                <h2 class="display-5 fw-bold">ebox news</h2>
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-3 mb-3 mt-5">
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow glass">
+                        <img src="img/news-mockup-1.png" class="card-img-top" alt="news thumb">
+                        <div class="card-body d-grid gap-4 py-4">
+                            <h4 class="card-title fw-bold">How ethbox Can Help Generate Passive Income</h4>
+                            <p class="card-text fw-bold" style="color: #666;">ethbox offers a number of unique safety and privacy features to help those sending and receiving cryptocurrencies on the Ethereum blockchain...</p>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-outline-primary">Read more...</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow glass">
+                        <img src="img/news-mockup-2.png" class="card-img-top" alt="news thumb">
+                        <div class="card-body d-grid gap-4 py-4">
+                            <h4 class="card-title fw-bold">How ethbox Can Protect Your Crypto Transactions</h4>
+                            <p class="card-text fw-bold" style="color: #666;">With cryptocurrencies like Ethereum and Bitcoin becoming huge news in recent months, more and more transactions are taking place every day...</p>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-outline-primary">Read more...</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow glass">
+                        <img src="img/news-mockup-3.png" class="card-img-top" alt="news thumb">
+                        <div class="card-body d-grid gap-4 py-4">
+                            <h4 class="card-title fw-bold">How Crypto Holders are Losing Millions</h4>
+                            <p class="card-text fw-bold" style="color: #666;">You’ve probably already seen how big cryptocurrencies like Bitcoin, Ethereum and more have become over the last few years. That looks set to...</p>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-outline-primary">Read more...</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center pt-4 my-5">
+                <button class="btn btn-lg btn-outline-secondary">Visit our Medium</button>
+            </div>
+        </div>
     </section>
 
-    <section class="container col-xxl-8 py-5">
-        <div class="p-3 pb-md-5 mx-auto text-center">
-            <h2 class="display-5 fw-bold">ebox news</h2>
-        </div>
-
-        <div class="row row-cols-1 row-cols-md-3 mb-3 mt-5">
-            <div class="col">
-                <div class="card mb-4 rounded-3 shadow-sm">
-                    <img src="img/news-mockup-1.png" class="card-img-top" alt="news thumb">
-                    <div class="card-body d-grid gap-4 py-4">
-                        <h4 class="card-title fw-bold">How ethbox Can Help Generate Passive Income</h4>
-                        <p class="card-text fw-bold" style="color: #666;">ethbox offers a number of unique safety and privacy features to help those sending and receiving cryptocurrencies on the Ethereum blockchain...</p>
-                        <div class="text-center">
-                            <a href="#" class="btn btn-outline-primary">Read more...</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card mb-4 rounded-3 shadow-sm">
-                    <img src="img/news-mockup-2.png" class="card-img-top" alt="news thumb">
-                    <div class="card-body d-grid gap-4 py-4">
-                        <h4 class="card-title fw-bold">How ethbox Can Protect Your Crypto Transactions</h4>
-                        <p class="card-text fw-bold" style="color: #666;">With cryptocurrencies like Ethereum and Bitcoin becoming huge news in recent months, more and more transactions are taking place every day...</p>
-                        <div class="text-center">
-                            <a href="#" class="btn btn-outline-primary">Read more...</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card mb-4 rounded-3 shadow-sm">
-                    <img src="img/news-mockup-3.png" class="card-img-top" alt="news thumb">
-                    <div class="card-body d-grid gap-4 py-4">
-                        <h4 class="card-title fw-bold">How Crypto Holders are Losing Millions</h4>
-                        <p class="card-text fw-bold" style="color: #666;">You’ve probably already seen how big cryptocurrencies like Bitcoin, Ethereum and more have become over the last few years. That looks set to...</p>
-                        <div class="text-center">
-                            <a href="#" class="btn btn-outline-primary">Read more...</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="text-center pt-4 my-5">
-            <button class="btn btn-lg btn-outline-secondary">Visit our Medium</button>
-        </div>
-    </section>
-
-    <section class="position-relative px-md-4 pt-5 bg-light">
-        <div class="white-diagonal"></div>
+    <section class="position-relative px-md-4 pt-5 bg-light" style="margin-top: -100px; z-index: -1;">
         
-            <!-- controls of token metrics below -->
-            <input type="radio" name="tm" id="tm-1" hidden="" checked="">
-            <input type="radio" name="tm" id="tm-2" hidden="">
-            <input type="radio" name="tm" id="tm-3" hidden="">
-            <input type="radio" name="tm" id="tm-4" hidden="">
-            <input type="radio" name="tm" id="tm-5" hidden="">
-            <input type="radio" name="tm" id="tm-6" hidden="">
-            <input type="radio" name="tm" id="tm-7" hidden="">
-            <input type="radio" name="tm" id="tm-8" hidden="">
+        <!-- controls of token metrics below -->
+        <input type="radio" name="tm" id="tm-1" hidden="" checked="">
+        <input type="radio" name="tm" id="tm-2" hidden="">
+        <input type="radio" name="tm" id="tm-3" hidden="">
+        <input type="radio" name="tm" id="tm-4" hidden="">
+        <input type="radio" name="tm" id="tm-5" hidden="">
+        <input type="radio" name="tm" id="tm-6" hidden="">
+        <input type="radio" name="tm" id="tm-7" hidden="">
+        <input type="radio" name="tm" id="tm-8" hidden="">
 
         <div class="container col-xxl-9 py-5">
 
@@ -482,8 +488,7 @@
                     top: -1.8ch;
                     left: -1.3ch;
                     color: #fff;
-                    -webkit-text-stroke: 1px #bbb;
-                    text-shadow: 2px 2px 4px #0002;
+                    text-shadow: 0px 0px 2px #000;
                     transition: all .3s ease;
                 }
                 .team-card:hover > h2 {
@@ -494,8 +499,7 @@
                     bottom: -2.2ch;
                     right: -1.3ch;
                     color: #fff;
-                    -webkit-text-stroke: 1px #bbb;
-                    text-shadow: -2px 2px 4px #0002;
+                    text-shadow: 0px 0px 2px #000;
                     transition: all .3s ease;
                 }
                 .team-card:hover > h3 {
