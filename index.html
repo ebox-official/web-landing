@@ -95,8 +95,8 @@
         </div>
     </section>
 
-    <section class="border-top border-bottom py-5">
-        <div class="container d-flex flex-wrap justify-content-center gap-3">
+    <section class="border-top border-bottom">
+        <div class="container d-flex flex-wrap justify-content-center gap-3 py-4">
             <a target="_blank" href="https://www.duckdao.io/">
                 <img src="img/partners/partner_duckdao.png" alt="DuckDAO"/>
             </a>
@@ -131,6 +131,63 @@
                 <img src="img/partners/partner_vendetta.png" alt="Vendetta"/>
             </a>
         </div>
+
+        <div style="position: relative; overflow: hidden; background-image: url(img/corporate-dan-smedley.jpg); background-size: cover; background-position: center 50%;">
+            <style>
+                .trapezius, .trapezius-outline {
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 75rem;
+                    height: 15rem;
+                    clip-path: polygon(0 0, 100% 0, 70% 100%, 30% 100%);
+                }
+                .trapezius {
+                    z-index: 2;
+                    background-color: #fff;
+                }
+                .trapezius-outline {
+                    z-index: 1;
+                    top: 1px;
+                    background-color: #eee;
+                }
+            </style>
+            <div class="trapezius"></div>
+            <div class="trapezius-outline"></div>
+            <div class="py-5">
+                <h2 class="h1 text-center pb-5 mb-0 position-relative" style="z-index: 3;">Supported Blockchains</h2>
+                <div class="container">
+                    <div class="row g-5 justify-content-center align-items-center"  style="max-width: 1080px; margin: 0 auto;">
+                        <div class="col-auto">
+                            <a target="_blank" href="#">
+                                <img src="img/chains/ethereum-chain.png" alt="ethereum chain" height="64">
+                            </a>
+                        </div>
+                        <div class="col-auto">
+                            <a target="_blank" href="#">
+                                <img src="img/chains/binance-smart-chain.png" alt="binance smart chain" height="64">
+                            </a>
+                        </div>
+                        <div class="col-auto">
+                            <a target="_blank" href="#">
+                                <img src="img/chains/polygon-chain.png" alt="polygon chain" height="64">
+                            </a>
+                        </div>
+                        <div class="col-auto">
+                            <a target="_blank" href="#">
+                                <img src="img/chains/reef-chain.png" alt="reef chain" height="64">
+                            </a>
+                        </div>
+                        <div class="col-auto">
+                            <a target="_blank" href="#">
+                                <img src="img/chains/moonriver-chain.png" alt="moonriver chain" height="64">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="container-fluid px-md-4 py-5 bg-light">
@@ -139,7 +196,7 @@
             <div class="row flex-lg-row-reverse justify-content-center align-items-center g-5 py-3 py-md-5">
                 <div class="col-10 col-sm-8 col-lg-6">
                     <a href="#">
-                        <img src="img/video-thumb.PNG" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="425" loading="lazy">
+                        <img src="img/video-thumb-no-play.PNG" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="425" loading="lazy">
                     </a>
                 </div>
                 <div class="col-lg-6">
@@ -251,7 +308,6 @@
                         <div>
                             <h4 class="fw-bold mb-4">Secure</h4>
                             <p class="fw-bold" style="color: #666;">To guarantee the highest level of security, our smart contract has been audited by CertiK Foundation.</p>
-                            <a class="text-decoration-none" href="#">Read more...</a>
                         </div>
                     </div>
                 </div>
@@ -263,7 +319,6 @@
                         <div>
                             <h4 class="fw-bold mb-4">Affordable</h4>
                             <p class="fw-bold" style="color: #666;">Transactions under $300 free of charge, and ebox holders are granted discounted fees.</p>
-                            <a class="text-decoration-none" href="#">Read more...</a>
                         </div>
                     </div>
                 </div>
@@ -275,7 +330,6 @@
                         <div>
                             <h4 class="fw-bold mb-4">Democratic</h4>
                             <p class="fw-bold" style="color: #666;">Votings are held anyone holding 1 EBOX or above at a certain point in time is eligible to vote.</p>
-                            <a class="text-decoration-none" href="#">Read more...</a>
                         </div>
                     </div>
                 </div>
@@ -287,7 +341,6 @@
                         <div>
                             <h4 class="fw-bold mb-4">Transparent</h4>
                             <p class="fw-bold" style="color: #666;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti necessitatibus totam.</p>
-                            <a class="text-decoration-none" href="#">Read more...</a>
                         </div>
                     </div>
                 </div>
@@ -338,252 +391,15 @@
                 </div>
             </div>
 
+            <div id="roadmap-ghost-title-trigger"></div>
+
             <div class="text-center pt-4 my-5">
                 <button class="btn btn-lg btn-outline-secondary">Visit our Medium</button>
             </div>
         </div>
     </section>
 
-    <section class="position-relative px-md-4 pt-5 bg-light" style="margin-top: -100px;">
-        
-        <!-- controls of token metrics below -->
-        <input type="radio" name="tm" id="tm-1" hidden="" checked="">
-        <input type="radio" name="tm" id="tm-2" hidden="">
-        <input type="radio" name="tm" id="tm-3" hidden="">
-        <input type="radio" name="tm" id="tm-4" hidden="">
-        <input type="radio" name="tm" id="tm-5" hidden="">
-        <input type="radio" name="tm" id="tm-6" hidden="">
-        <input type="radio" name="tm" id="tm-7" hidden="">
-        <input type="radio" name="tm" id="tm-8" hidden="">
-
-        <div class="container col-xxl-9 py-5">
-
-            <h1 class="display-5 fw-bold lh-1 mb-4 text-center py-5 mb-md-5">Tokenomics</h1>
-
-            <div class="row justify-content-center pb-md-5">
-                <div class="col-12 col-md-auto">
-                    <ul class="tm-ul d-flex flex-column gap-3 list-unstyled fs-4 text-end">
-                        <li>
-                            <label class="pointer" for="tm-1">
-                                Token sale <span class="fs-3">35%</span>
-                            </label>
-                        </li>
-                        <li>
-                            <label class="pointer" for="tm-2">
-                                Staking <span class="fs-3">18%</span>
-                            </label>
-                        </li>
-                        <li>
-                            <label class="pointer" for="tm-3">
-                                Marketing <span class="fs-3">16%</span>
-                            </label>
-                        </li>
-                        <li>
-                            <label class="pointer" for="tm-4">
-                                Team <span class="fs-3">12%</span>
-                            </label>
-                        </li>
-                        <li>
-                            <label class="pointer" for="tm-5">
-                                Backup <span class="fs-3">10%</span>
-                            </label>
-                        </li>
-                        <li>
-                            <label class="pointer" for="tm-6">
-                                Liquidity <span class="fs-3">4%</span>
-                            </label>
-                        </li>
-                        <li>
-                            <label class="pointer" for="tm-7">
-                                Advisory <span class="fs-3">3%</span>
-                            </label>
-                        </li>
-                        <li>
-                            <label class="pointer" for="tm-8">
-                                Referral <span class="fs-3">2%</span>
-                            </label>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-12 col-md-6">
-                    <div class="mx-auto tm-content-wrapper ratio ratio-1x1 shadow" style="max-width: 555px; text-shadow: 0 5px 10px #0002;">
-                        <div class="tm-content p-3">
-                            <p>
-                                <strong class="text-black">Strategic</strong>: 6% – 7% unlocked at Token Generation Event (TGE),
-                                monthly distribution of other 93% over following 12 months - details.<br><br>
-                                <strong class="text-black">Private Sale</strong>: 24% – 20% unlocked at TGE, monthly
-                                distribution of other 80% over following 4.
-                                months.<br><br>
-                                <strong class="text-black">Public Sale</strong>: 2.5% fully unlocked at TGE.<br><br>
-                                <strong class="text-black">DuckDao Farmcubation</strong>: 2.5% 50% unlocked at TGE, monthly
-                                distribution of the other 50% over 2 months.
-                            </p>
-                            <small class="text-muted">*TGE - May 2021</small>
-                        </div>
-                        <div class="tm-content p-3">
-                            <p>Available for 4 years from TGE, 243,750 set aside each month for users holding at least 5,000
-                                tokens.<br><small class="text-muted">More information can be found <a href="#">here</a>.</small>
-                            </p>
-                            <small class="text-muted">*TGE - May 2021</small>
-                        </div>
-                        <div class="tm-content p-3">
-                            <p>Monthly distribution over 24 months, starting 6 months after.</p>
-                            <small class="text-muted">*TGE - May 2021</small>
-                        </div>
-                        <div class="tm-content p-3">
-                            <p>Monthly distribution over 18 months, starting 12 months after .</p>
-                            <small class="text-muted">*TGE - May 2021</small>
-                        </div>
-                        <div class="tm-content p-3">
-                            <p>
-                                <strong class="text-black">Phase 1</strong>: Monthly distribution over 6 months, starting 6
-                                months after TGE - Oct 2021.<br><br>
-                                <strong class="text-black">Phase 2</strong>: Monthly distribution over 12 months, starting 24
-                                months after TGE - May 2023.
-                            </p>
-                            <small class="text-muted">*TGE - May 2021</small>
-                        </div>
-                        <div class="tm-content p-3">
-                            <p>
-                                <strong class="text-black">Phase 1</strong>: Monthly distribution over 6 months, starting 6
-                                months after TGE - Oct 2021.<br><br>
-                                <strong class="text-black">Phase 2</strong>: Monthly distribution over 12 months, starting 24
-                                months after TGE - May 2023.
-                            </p>
-                            <small class="text-muted">*TGE - May 2021</small>
-                        </div>
-                        <div class="tm-content p-3">
-                            <p>Monthly distribution over 12 months, starting at TGE.</p>
-                            <small class="text-muted">*TGE - May 2021</small>
-                            <small class="text-muted">*TGE - May 2021</small>
-                        </div>
-                        <div class="tm-content p-3">
-                            <p>Monthly distribution over 6 months, start 6 months after TGE.</p>
-                            <small class="text-muted">*TGE - May 2021</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="position-relative px-md-4 pt-5">
-        <div class="light-diagonal"></div>
-
-        <div class="container col-xxl-8 py-5 text-center" style="margin: 6rem auto;">
-            <h1 class="display-5">Team</h1>
-            <p class="fw-bold pb-5" style="max-width: 666px; margin: 0 auto 3rem auto; color: #666;">The three founders and their team with their innovative spirit of leaving no stone unturned when the mission is finding the perfect solution. Starting off with just a dream, they now have a dream and a blockchain enterprise to go along.</p>
-
-            <style>
-                .team-card {
-                    top: 0;
-                    max-width: 321px;
-                    border-width: 1.25rem!important;
-                    cursor: pointer;
-                    transition: all .3s ease;
-                }
-                .team-card:hover {
-                    top: -1rem;
-                }
-                .team-card > h2 {
-                    font-size: 5rem;
-                    top: -1.8ch;
-                    left: -1.3ch;
-                    color: #fff;
-                    text-shadow: 0px 0px 2px #000;
-                    transition: all .3s ease;
-                }
-                .team-card:hover > h2 {
-                    left: 0;
-                }
-                .team-card > h3 {
-                    font-size: 3rem;
-                    bottom: -2.2ch;
-                    right: -1.3ch;
-                    color: #fff;
-                    text-shadow: 0px 0px 2px #000;
-                    transition: all .3s ease;
-                }
-                .team-card:hover > h3 {
-                    right: 0;
-                }
-                .contact-link {
-                    position: relative;
-                    top: 0;
-                    line-height: 0;
-                    border-radius: 4px;
-                    box-shadow: 0 4px 4px #0008;
-                    transition: all .3s ease;
-                }
-                .contact-link:hover {
-                    top: -.25rem;
-                }
-                .contact-link--round {
-                    border-radius: 50%;
-                }
-
-                @media(max-width: 576px) {
-                    .team-card {
-                        margin: 0 auto 7.5rem auto;
-                    }
-                    .team-card > h2 {
-                        left: 0;
-                    }
-                    .team-card > h3 {
-                        right: 0;
-                    }
-                }
-            </style>
-            <div class="d-md-flex justify-content-between gap-5">
-                <div class="team-card position-relative border border-primary shadow">
-                    <h2 class="position-absolute">Lukas</h2>
-                    <img class="img-fluid" src="img/team/Lukas Schiefer-min.jpg" alt="lukas schiefer">
-                    <h3 class="position-absolute">Schiefer</h3>
-                    <div class="position-absolute d-flex gap-2 text-center" style="left: .5rem; bottom: .5rem;">
-                        <a href="#" target="_blank" class="contact-link bg-white fs-3 text-secondary">
-                            <i class="bi bi-linkedin"></i>
-                        </a>
-                        <a href="#" target="_blank" class="contact-link contact-link--round bg-white fs-3 text-secondary">
-                            <i class="bi bi-telegram"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="team-card position-relative border border-primary shadow">
-                    <h2 class="position-absolute">Luke</h2>
-                    <img class="img-fluid" src="img/team/Lukas Pratschner-min.jpg" alt="lukas pratschner">
-                    <h3 class="position-absolute">Pratschner</h3>
-                    <div class="position-absolute d-flex gap-2 text-center" style="left: .5rem; bottom: .5rem;">
-                        <a href="#" target="_blank" class="contact-link bg-white fs-3 text-secondary">
-                            <i class="bi bi-linkedin"></i>
-                        </a>
-                        <a href="#" target="_blank" class="contact-link contact-link--round bg-white fs-3 text-secondary">
-                            <i class="bi bi-telegram"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="team-card position-relative border border-primary shadow">
-                    <h2 class="position-absolute">Paul</h2>
-                    <img class="img-fluid" src="img/team/Paul Simode-min.jpg" alt="paul simode">
-                    <h3 class="position-absolute">Simode</h3>
-                    <div class="position-absolute d-flex gap-2 text-center" style="left: .5rem; bottom: .5rem;">
-                        <a href="#" target="_blank" class="contact-link bg-white fs-3 text-secondary">
-                            <i class="bi bi-linkedin"></i>
-                        </a>
-                        <a href="#" target="_blank" class="contact-link contact-link--round bg-white fs-3 text-secondary">
-                            <i class="bi bi-telegram"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="roadmap-ghost-title-trigger"></div>
-
-    </section>
-
-    <section class="position-relative bg-light" style="padding: 12rem 0 3rem 0;">
-        <div class="white-diagonal"></div>
-
+    <section class="position-relative bg-light" style="padding: 18rem 0 9rem 0; margin-top: -100px;">
         <header id="roadmap-header">
             <div id="roadmap-ghost-title" style="transform: translate3d(-279px, -84.926px, 0px);">Developing</div>
             <h2 class="h1">Roadmap</h2>
