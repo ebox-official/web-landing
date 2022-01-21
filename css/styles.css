@@ -182,6 +182,10 @@ html.dark ::-webkit-scrollbar {
 /* Mobile */
 @media(max-width: 576px) {
 
+  .bc-logo {
+    height: 32px;
+  }
+
   #roadmap {
     justify-content: flex-start;
   }
@@ -211,6 +215,10 @@ html.dark ::-webkit-scrollbar {
   .glass {
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
+  }
+
+  .bc-logo {
+    height: 64px;
   }
 
   #roadmap {
