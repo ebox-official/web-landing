@@ -48,9 +48,7 @@ function scrollParallax(elementSelector, triggerElement, duration, transformFrom
 
 let Scrollbar = window.Scrollbar;
 let scrollbar = Scrollbar.init(document.querySelector('#main-scrollbar'), {
-    continuousScrolling: false,
-    alwaysShowTracks: true,
-    plugins: {}
+    continuousScrolling: false
 });
 
 window.addEventListener('hashchange', function () {

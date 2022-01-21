@@ -106,15 +106,9 @@ html.dark ::-webkit-scrollbar {
   transform: translate(-50%, -50%);
 }
 
-#roadmap {
-  display: flex;
-  justify-content: center;
-  overflow: auto;
-}
-
 #roadmap > div {
   flex-shrink: 0;
-  width: 256px;
+  max-width: 256px;
 }
 
 #roadmap > div > h2 {
@@ -169,6 +163,13 @@ html.dark ::-webkit-scrollbar {
   opacity: 1!important;
 }
 
+#roadmap ul {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+  line-height: 1.1;
+}
+
 /*** media queries
  *    ███╗   ███╗███████╗██████╗ ██╗ █████╗ ███████╗
  *    ████╗ ████║██╔════╝██╔══██╗██║██╔══██╗██╔════╝
@@ -189,6 +190,20 @@ html.dark ::-webkit-scrollbar {
     font-size: 3.33rem;
   }
 
+  #roadmap > div {
+    margin: 0 auto;
+    margin-bottom: 3rem;
+  }
+
+  #roadmap > div > h2 {
+    padding-bottom: .25rem;
+    border-bottom: 2px solid #ff6000;
+  }
+
+  #roadmap > div > .line {
+    display: none;
+  }
+
 }
 /* NON mobile */
 @media(min-width: 577px) {
@@ -196,6 +211,11 @@ html.dark ::-webkit-scrollbar {
   .glass {
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
+  }
+
+  #roadmap {
+    display: flex;
+    justify-content: center;
   }
 
 }
