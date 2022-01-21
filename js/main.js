@@ -38,10 +38,29 @@ function scrollParallax(elementSelector, triggerElement, duration, transformFrom
         .addTo(new ScrollMagic.Controller());
 }
 
-scrollParallax(
-    "#roadmap-ghost-title",
-    "#roadmap-ghost-title-trigger",
-    333,
-    "translate(-50%, -20%)",
-    "translate(-50%, -80%)"
-);
+// scrollParallax(
+//     "#roadmap-ghost-title",
+//     "#roadmap-ghost-title-trigger",
+//     333,
+//     "translate(-50%, -20%)",
+//     "translate(-50%, -80%)"
+// );
+
+let Scrollbar = window.Scrollbar;
+let scrollbar = Scrollbar.init(document.querySelector('#main-scrollbar'), {
+    continuousScrolling: false,
+    alwaysShowTracks: true,
+    plugins: {}
+});
+
+window.addEventListener('hashchange', function () {
+    let hash = window.location.hash;
+    if (hash) {
+        let target = document.getElementById(hash.substring(1));
+        if (target) {
+            scrollbar.scrollIntoView(target, {
+                offsetTop: -scrollbar.containerEl.scrollTop,
+            });
+        }
+    }
+}, false);
