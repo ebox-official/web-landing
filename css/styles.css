@@ -221,9 +221,14 @@ html.dark ::-webkit-scrollbar {
     height: 64px;
   }
 
+  #misc-section {
+    background-image: url(../img/ebox-iso-stairs.svg);
+    background-size: 100%;
+    background-position: center;
+  }
+
   #roadmap {
     display: flex;
     justify-content: center;
   }
-
 }

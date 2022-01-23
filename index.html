@@ -205,7 +205,7 @@
             </div>
         </section>
     
-        <section id="escrow-section" class="position-relative px-4 pt-5">
+        <section id="escrow-section" class="position-relative px-4 py-5">
             <div class="light-diagonal"></div>
             <div class="container col-xxl-8">
                 <div class="row justify-content-center align-items-center g-5 pt-5 mt-5">
@@ -222,6 +222,38 @@
                     </div>
                 </div>
             </div>
+
+            <!-- video -->
+            <div class="mt-5">
+                <style>
+                    .laptop-screen {
+                        width: 80%;
+                        margin: 0 auto;
+                        border: .25rem solid #000;
+                        border-radius: 1rem;
+                        border-top-width: 1rem;
+                        border-bottom-width: 1rem;
+                        background-color: #000;
+                        box-shadow: 0 0 0px 5px #938f93;
+                    }
+                    .laptop-base {
+                        display: block;
+                        margin: 0 auto;
+                    }
+                </style>
+                <h3 class="text-center mb-5 fw-bold">See how it works</h3>
+                <div class="container col-xxl-8">
+                    <div class="laptop-screen">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/jA9MufTDSwo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+                            </iframe>
+                        </div>
+                    </div>
+                    <img src="img/laptop-base.png" alt="laptop base" class="laptop-base img-fluid">
+                </div>
+            </div>
+            <!-- end of video -->
+
         </section>
     
         <section id="eips-section" class="position-relative pt-5 mt-5 border-bottom bg-light">
@@ -274,9 +306,6 @@
             #misc-section {
                 position: relative;
                 z-index: 1;
-                background-image: url(img/ebox-iso-stairs.svg);
-                background-size: 100%;
-                background-position: center;
                 background-color: #fff;
                 clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 100px));
             }
@@ -389,7 +418,7 @@
                     </div>
                 </div>
     
-                <div id="roadmap-ghost-title-trigger"></div>
+                <!-- <div id="roadmap-ghost-title-trigger"></div> -->
     
                 <div class="text-center pt-4 my-5">
                     <button class="btn btn-lg btn-outline-secondary">Visit our Medium</button>
@@ -397,7 +426,7 @@
             </div>
         </section>
     
-        <section id="roadmap-section" class="position-relative bg-light" style="padding: 18rem 0 9rem 0; margin-top: -100px;">
+        <section id="roadmap-section" class="position-relative bg-light" style="padding: 18rem 0 7.5rem 0; margin-top: -100px;">
             <header id="roadmap-header">
                 <div id="roadmap-ghost-title" style="transform: translate3d(-50%, -110px, 0px);">Developing</div>
                 <h2 class="h1">Roadmap</h2>
