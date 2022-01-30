@@ -212,15 +212,15 @@ html.dark ::-webkit-scrollbar {
 /* NON mobile */
 @media(min-width: 577px) {
 
-  .glass {
+  /* .glass {
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-  }
+  } */
 
   .bc-logo {
     height: 64px;
   }
-  
+
   #roadmap {
     display: flex;
     justify-content: center;
