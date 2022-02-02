@@ -348,25 +348,28 @@
                             <p class="fw-bold">Wanna work with us or integrate our tech?<br>Drop us a message!</p>
                         </div>
                         <div class="container-fluid mt-5 p-0">
-                            <form class="row g-2 mb-4">
+                            <form class="row g-2 mb-4" onsubmit="return sendEmail(this);">
                                 <div class="col-12 col-md-6">
                                     <label for="name" class="ms-2 form-label">Name</label>
-                                    <input id="name" type="text" class="form-control" placeholder="Name">
+                                    <input id="name" type="text" class="form-control" placeholder="Name" maxlength="255" required>
                                 </div>
                                 <div class="col-12 col-md-6">
                                     <label for="subject" class="ms-2 form-label">Subject</label>
-                                    <input id="subject" type="text" class="form-control" placeholder="Subject">
+                                    <input id="subject" type="text" class="form-control" placeholder="Subject" maxlength="255" required>
                                 </div>
                                 <div class="col-12">
-                                    <label for="email" class="ms-2 form-label">Email</label>
-                                    <input type="text" class="form-control" id="email" placeholder="Email">
+                                    <label for="contact-us-email" class="ms-2 form-label">Email</label>
+                                    <input type="email" class="form-control" id="contact-us-email" placeholder="Email" maxlength="255" required>
                                 </div>
                                 <div class="col-12">
                                     <label for="message" class="ms-2 form-label">Message</label>
-                                    <textarea class="form-control" id="message" rows="3"></textarea>
+                                    <textarea class="form-control" id="message" rows="3" maxlength="5000" required></textarea>
                                 </div>
                                 <div class="col-12 mt-5">
-                                    <button type="submit" class="d-block w-50 mx-auto btn btn-primary btn-lg">Send</button>
+                                    <button id="contact-us-submit" type="submit" class="d-block w-50 mx-auto btn btn-primary btn-lg">Send</button>
+                                </div>
+                                <div class="contact-us-notification">
+                                    <!-- alert go here -->
                                 </div>
                             </form>
                             <small class="text-muted">
@@ -692,10 +695,15 @@
                     <div class="my-5" style="max-width: 333px; margin: 0 auto;">
                         <h3>Stay up to date</h3>
                         <p style="color: #aaa;">Don't miss the latest news about ebox.</p>
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Enter your email address">
-                            <button class="btn btn-outline-primary" type="button">Subscribe</button>
-                        </div>
+                        <form class="mb-2" onsubmit="return subscribe(this);">
+                            <div class="input-group">
+                                <input id="subscribe-email" type="text" class="form-control" placeholder="Enter your email address">
+                                <button id="subscribe-submit" class="btn btn-outline-primary" type="submit">Subscribe</button>
+                            </div>
+                            <div class="subscribe-notification">
+                                <!-- alert go here -->
+                            </div>
+                        </form>
                         <small class="text-muted">For more details see the Privacy Policy.</small>
                     </div>
                 </div>

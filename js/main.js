@@ -62,3 +62,124 @@ window.addEventListener('hashchange', function () {
         }
     }
 }, false);
+
+function q(el, sel) {
+    return el.querySelector(sel);
+}
+
+async function sendEmail(f) {
+    let [name, subject, email, message] = [q(f, "#name"), q(f, "#subject"), q(f, "#contact-us-email"), q(f, "#message")].map(el => el.value);
+    
+    // show a loader
+    let submit = q(f, "#contact-us-submit");
+    let prevSubmitText = submit.textContent;
+    submit.innerHTML = '<div class="spinner-border spinner-border-sm" role="status"></div>';
+
+    let payload = new URLSearchParams({
+        "action": "submit",
+        "form": "contact_business",
+        "fields[name]": name,
+        "fields[subject]": subject,
+        "fields[mail]": email,
+        "fields[message]": message
+    });
+
+    // send message
+    let response = await fetch("https://ebox.io/api/form_data/form_data.php",
+        {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body: payload
+        }
+    );
+    let responseData = JSON.parse(await response.text());
+
+    let notification = q(f, ".contact-us-notification");
+    if (responseData.error) {
+
+        // notify error
+        notification.innerHTML = `
+<div class="alert alert-danger alert-dismissible fade show mt-4 mb-0" role="alert">
+    <strong>Something went wrong.</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+        `;
+    } else {
+
+        // notify success
+        notification.innerHTML = `
+<div class="alert alert-success alert-dismissible fade show mt-4 mb-0" role="alert">
+    <strong>Well done!</strong> The message was sent successfully.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+        `;
+
+        // clean fields
+        f.reset();
+    }
+
+    // reset submit
+    submit.innerHTML = prevSubmitText;
+
+    // needed to prevent refresh
+    return false;
+}
+
+async function subscribe(f) {
+    let email = q(f, "#subscribe-email").value;
+    
+    // show a loader
+    let submit = q(f, "#subscribe-submit");
+    let prevSubmitText = submit.textContent;
+    submit.innerHTML = '<div class="spinner-border spinner-border-sm" role="status"></div>';
+
+    let payload = new URLSearchParams({
+        "action": "submit",
+        "form": "newsletter",
+        "fields[mail]": email
+    });
+
+    // send message
+    let response = await fetch("https://ebox.io/api/form_data/form_data.php",
+        {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body: payload
+        }
+    );
+    let responseData = JSON.parse(await response.text());
+
+    let notification = q(f, ".subscribe-notification");
+    if (responseData.error) {
+
+        // notify error
+        notification.innerHTML = `
+<div class="alert alert-danger alert-dismissible fade show mt-4 mb-0" role="alert">
+    <strong>Something went wrong.</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+        `;
+    } else {
+
+        // notify success
+        notification.innerHTML = `
+<div class="alert alert-success alert-dismissible fade show mt-4 mb-0" role="alert">
+    <strong>YAY!</strong> You've been subscribed.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+        `;
+
+        // clean fields
+        f.reset();
+    }
+
+    // reset submit
+    submit.innerHTML = prevSubmitText;
+
+    // needed to prevent refresh
+    return false;
+}
