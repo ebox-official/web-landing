@@ -111,7 +111,7 @@ async function sendEmail(f) {
         // notify success
         notification.innerHTML = `
 <div class="alert alert-success alert-dismissible fade show mt-4 mb-0" role="alert">
-    <strong>Well done!</strong> The message was sent successfully.
+    <strong>Well done</strong> &ndash; Let's elevate your project to new heights together!
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
         `;
@@ -168,7 +168,7 @@ async function subscribe(f) {
         // notify success
         notification.innerHTML = `
 <div class="alert alert-success alert-dismissible fade show mt-4 mb-0" role="alert">
-    <strong>YAY!</strong> You've been subscribed.
+    <strong>Welcome to the community!</strong><br>We'll keep in touch.
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
         `;
